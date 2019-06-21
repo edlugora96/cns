@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?edlugora.ga [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule \.(jpg|jpeg|png|gif|svg|icon)$ - [NC,F,L]
+RewriteRule . index.html [L]
+
+php_value display_errors 1
