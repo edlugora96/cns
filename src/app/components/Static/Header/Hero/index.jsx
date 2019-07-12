@@ -3,9 +3,14 @@ import React from 'react';
 import Markdown from 'react-markdown';
 
 const heroText = `
-Moving Up your
-## CARRER LADDER
-TRANSLATE YOUR VISIONS INTO A REALITY
+
+
+
+## TRANSLATE YOUR VISIONS INTO A REALITY
+
+
+
+
 `;
 
 const Hero = () => {

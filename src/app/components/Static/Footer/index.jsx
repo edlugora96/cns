@@ -1,5 +1,6 @@
 /* jshint ignore:end */
 import React from "react";
+import Map from '$utils/Map';
 
 import im1 from "$img/visa.png";
 import im2 from "$img/2.png";
@@ -7,7 +8,8 @@ import im3 from "$img/3.png";
 import im4 from "$img/4.png";
 import im5 from "$img/5.png";
 
-const Footer = () => {
+const Footer = (props) => {
+  const { mobile } = props;
   return pug`
     footer#footer
       .top-footer
@@ -17,7 +19,7 @@ const Footer = () => {
           .footer-section
             h3 Contact Us
 
-            p CNS International offers tailor-made classes in Portuguese and English, one-to-one or small groups, so as to focus on the objectives of the student as well as have effective and concrete results.
+            p CNS International offers tailor-made classes and translations in English, French, Portuguese and Spanish for one-to-one or small groups. We focus on the objectives of the student and provide effective and concrete results.
 
             b Address
 
@@ -25,11 +27,17 @@ const Footer = () => {
 
             b Email
 
-            p contacto@cnsinternation.es
+            p contacto@cnsinternational.es
 
             b Phone
 
             p +34 658 67 37 24
+
+            .ui.button.primary Become a student
+
+            .ui.button.primary Become a teacher
+
+            p
 
             nav.social-footer
               a(href="https://www.facebook.com/cnsinternational.es/")
@@ -41,7 +49,10 @@ const Footer = () => {
               a(href="https://www.linkedin.com/in/cnsinternational")
                 i.icon.linkedin.big
 
-          //- .footer-section
+          if (!mobile)
+            .footer-section.map
+              Map
+
           //-   h3 TWITTER
 
           //-   a @John Doe

@@ -11,9 +11,10 @@ This policy applies to both in-company and online classes.
 
 const Business = (props) =>{
   return pug`
-    .cancellationwp
-      .cancellation
-        Markdown(source=term, escapehtml=false)
+    section.cancellationwp
+      .cancellationwpin.section-body
+        .cancellation
+          Markdown(source=term, escapehtml=false)
   `;
 };
 

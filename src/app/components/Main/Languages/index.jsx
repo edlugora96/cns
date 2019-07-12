@@ -7,33 +7,34 @@ import l4 from '$img/4l.png';
 
 const Languages = (props) =>{
   return pug`
-    .languageswd.lan
-      .languages
-        .section
-          h4
-            img(src=l4)
+    section.languageswd.lan
+      .languageswdin.section-body
+        .languages
+          .section.text
+            h2 Languages
 
-            | ENGLISH
+            p TEACHING INCLUDES THE SYNTAX OF THE LANGUAGE, GRAMMAR, PHONETICS AND VOCABULARY. THE PRACTICAL ASPECT IS TAUGHT THROUGH CONVERSATION, GAMES, ORAL EXERCISES, SIMULATIONS OF REAL SITUATIONS, AND READING.
 
-          h4
-            img(src=l3)
+          .section.btns-improv
+            .btn-improv
+              img(src=l4)
 
-            | FRENCH
+              span ENGLISH
 
-          h4
-            img(src=l2)
+            .btn-improv
+              img(src=l3)
 
-            | PORTUGUESE
+              span FRENCH
 
-          h4
-            img(src=l1)
+            .btn-improv
+              img(src=l2)
 
-            | SPANISH
+              span PORTUGUESE
 
-        .section
-          h2 Languages
+            .btn-improv
+              img(src=l1)
 
-          p TEACHING INCLUDES THE SYNTAX OF THE LANGUAGE, GRAMMAR, PHONETICS AND VOCABULARY. THE PRACTICAL ASPECT IS TAUGHT THROUGH CONVERSATION, GAMES, ORAL EXERCISES, SIMULATIONS OF REAL SITUATIONS, AND READING.
+              span SPANISH
   `;
 };
 

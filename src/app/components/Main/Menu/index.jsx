@@ -44,15 +44,14 @@ class Menu extends React.Component {
     this.handlerScroll =  this.handlerScroll.bind(this);
   }
   componentDidMount(){
-    this.about = document.querySelector(".about-us");
-    this.wwd = document.querySelector(".wwd");
-    this.lan = document.querySelector(".lan");
-    this.corp = document.querySelector(".corp");
-    this.online = document.querySelector(".online");
-    this.trans = document.querySelector(".trans");
-    this.buSp = document.querySelector(".bu-sp");
-    this.ucEv = document.querySelector(".uc-ev");
-    this.kids = document.querySelector(".kids");
+    this.wwd = document.querySelector(".wwdwp");
+    this.lan = document.querySelector(".languageswd");
+    this.corp = document.querySelector(".incompanywp");
+    this.online = document.querySelector(".onlinewp");
+    this.trans = document.querySelector(".translationwp");
+    this.buSp = document.querySelector(".businesswp");
+    this.ucEv = document.querySelector(".upcomingwp");
+    this.kids = document.querySelector(".kidswp");
 
   }
   handlerScroll(){
@@ -85,6 +84,11 @@ class Menu extends React.Component {
           i.icon.file.alternate.huge
 
           h6.text TRANSLATIONS
+
+        a.item(onClick=()=>{scrollTo(document.body, { top: this.kids.offsetTop })})
+          i.icon.rocket.huge
+
+          h6.text KIDS
 
         a.item(onClick=()=>{scrollTo(document.body, { top: this.buSp.offsetTop })})
           i.icon.suitcase.huge

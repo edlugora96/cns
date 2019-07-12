@@ -11,9 +11,10 @@ You’re also welcome to join business workshops created by CNS International.
 `;
 const Business = (props) =>{
   return pug`
-    .businesswp.bu-sp
-      .business
-        Markdown(source=whatwedo, escapehtml=false)
+    section.businesswp.bu-sp
+      .businesswpin.section-body
+        .business
+          Markdown(source=whatwedo, escapehtml=false)
   `;
 };
 

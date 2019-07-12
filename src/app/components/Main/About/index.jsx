@@ -1,5 +1,8 @@
 import React from 'react';
 import Markdown from 'react-markdown/with-html';
+import ta from '$img/ta.svg';
+// import st from '$img/st.svg';
+// import st2 from '$img/st2.svg';
 const whatwedo = `
 ## ABOUT US
 
@@ -19,12 +22,18 @@ business workshops and team-building activities, translations, and
 language classes for children and young adults.
 `;
 
-
 const WhatWeDo = (props) =>{
   return pug`
-    .wwdwp
-      .wwd
-        Markdown(source=whatwedo, escapehtml=false)
+    section.wwdwp
+      .wwdwpin.section-body
+        img(src=ta)
+
+        .wwd
+          Markdown(source=whatwedo, escapehtml=false)
+
+      //- img(src=st)
+
+      //- img(src=st2)
   `;
 };
 

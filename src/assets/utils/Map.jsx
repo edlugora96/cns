@@ -12,6 +12,7 @@ export class MapContainer extends Component {
     };
   }
   onMarkerClick(props, marker, e) {
+    console.log('click');
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
@@ -25,9 +26,11 @@ export class MapContainer extends Component {
 
     return (
       <div
+        id= "map"
         style={{
           position: "relative",
-          height: "calc(100vh - 20px)"
+          height: "100%",
+          width: "100%"
         }}
       >
         <Map style={{}} google={this.props.google} zoom={14}>
@@ -49,6 +52,5 @@ export class MapContainer extends Component {
   }
 }
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyD6Ps4RpnG32yJGoQRnR00Z4g26mRfw--k",
-  v: "3.30"
+  apiKey: "AIzaSyD6Ps4RpnG32yJGoQRnR00Z4g26mRfw--k"
 })(MapContainer);
