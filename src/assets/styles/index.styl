@@ -1,4 +1,5 @@
 @import 'animations'
+@import 'pages'
 Main = #0098D6
 html
   color #202124
@@ -7,6 +8,13 @@ img
   max-width 100%
 *
   font-family 'Century Gothic','TeXGyreAdventor',sans-serif
+.menu-not-home
+  background-color #FFFFFF !important
+  color #000 !important
+  position relative
+  z-index 6
+  *
+    color #000 !important
 .wwdwp
 .languageswd
 .incompanywp
@@ -40,7 +48,6 @@ img
   align-items: center;
   cursor: pointer;
 #main-header
-  min-height 100vh
   display grid
   justify-items center
   .scrollDown
@@ -315,7 +322,7 @@ img
   animation-direction alternate-reverse
 
 .fade-in
-  animation fadein 1s
+  animation fadein 0.3s
 .fade-out
   animation fadeout 1s
 .see

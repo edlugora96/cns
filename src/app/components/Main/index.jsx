@@ -1,5 +1,6 @@
 /* jshint ignore:end */
 import React from 'react';
+import {Helmet} from "react-helmet";
 
 import About from './About';
 import Languages from './Languages';
@@ -46,25 +47,28 @@ class Main extends React.Component {
   }
   render(){
     return pug`
-      Menu
+      Helmet
+        title CNS
 
-      About
+      Menu(...this.props)
 
-      Languages
+      About(...this.props)
 
-      InCompany
+      Languages(...this.props)
 
-      Online
+      InCompany(...this.props)
 
-      Translation
+      Online(...this.props)
 
-      Kids
+      Translation(...this.props)
 
-      Business
+      Kids(...this.props)
 
-      Upcoming
+      Business(...this.props)
 
-      Cancellation
+      Upcoming(...this.props)
+
+      Cancellation(...this.props)
     `;
   }
 };

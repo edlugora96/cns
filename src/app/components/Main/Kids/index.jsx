@@ -1,21 +1,49 @@
 /* jshint ignore:end */
 import React from 'react';
+import {Helmet} from "react-helmet";
 import k1 from '$img/k1.svg';
 import k2 from '$img/k2.svg';
 import k3 from '$img/k3.svg';
 import k4 from '$img/k4.svg';
 
-const Kids = () => {
+const kidsText = {
+  0:{
+    title:'Kids',
+    content: 'We believe that learning a new language is always a wonderful idea at any age. Allow your kids to have a jumpstart in life by starting them at an earlier age. We currently provide private 1-2-1 classes to prepare kids for any upcoming exam, or simply just to practice speaking, writing, reading, and listening!',
+    btn:'SIGN UP TODAY',
+  },
+  1:{
+    title:'Niños',
+    content: 'Creemos que el aprendizaje de una lengua nueva es siempre una magnífica idea a cualquier edad. Permita que sus niños den un empujón a sus vidas al empezar a una edad temprana. Actualmente proporcionamos clases privadas destinadas a preparar su próximo examen o simplemente a practicar ¡oralidad, escritura, lectura y escucha!',
+    btn:'REGÍSTRATE HOY',
+  },
+  2:{
+    title:'Kids',
+    content: 'We believe that learning a new language is always a wonderful idea at any age. Allow your kids to have a jumpstart in life by starting them at an earlier age. We currently provide private 1-2-1 classes to prepare kids for any upcoming exam, or simply just to practice speaking, writing, reading, and listening!',
+    btn:'SIGN UP TODAY',
+  },
+  3:{
+    title:'Kids',
+    content: 'We believe that learning a new language is always a wonderful idea at any age. Allow your kids to have a jumpstart in life by starting them at an earlier age. We currently provide private 1-2-1 classes to prepare kids for any upcoming exam, or simply just to practice speaking, writing, reading, and listening!',
+    btn:'SIGN UP TODAY',
+  }
+};
+
+const Kids = (props) => {
   return pug`
-    section.kidswp
+    if props.see
+      Helmet
+        title= kidsText[props.lang].title + ' | CNS'
+
+    section.kidswp(className=props.see?"see":"")
       .kidswpin.section-body
         .kids
-          h1 Kids
+          h1= kidsText[props.lang].title
 
           .kids-section
-            p We believe that learning a new language is always a wonderful idea at any age. Allow your kids to have a jumpstart in life by starting them at an earlier age. We currently provide private 1-2-1 classes to prepare kids for any upcoming exam, or simply just to practice speaking, writing, reading, and listening!
+            p= kidsText[props.lang].content
 
-            button.ui.button.primary SIGN UP TODAY
+            button.ui.button.primary= kidsText[props.lang].btn
 
       .imgs-section-kids
         img(src=k1)

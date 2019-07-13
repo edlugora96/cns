@@ -1,9 +1,9 @@
 /* jshint ignore:end */
 import React from "react";
-// import $ from "jquery";
 // eslint-disable-next-line
 import Carrousel from "$utils/Slick";
 import { scrollTo } from 'scroll-js';
+import menuLang from './MenuLang';
 
 const opt = {
       dots: false,
@@ -63,37 +63,37 @@ class Menu extends React.Component {
         a.item(onClick=()=>{scrollTo(document.body, { top: this.wwd.offsetTop })})
           i.icon.users.huge
 
-          h6.text ABOUT US
+          h6.text= menuLang[this.props.lang].ABOUT
 
         a.item(onClick=()=>{scrollTo(document.body, { top: this.lan.offsetTop })})
           i.icon.comments.huge
 
-          h6.text LANGUAGES
+          h6.text= menuLang[this.props.lang].LANGUAGES
 
         a.item(onClick=()=>{scrollTo(document.body, { top: this.corp.offsetTop })})
           i.icon.building.huge
 
-          h6.text IN COMPANY
+          h6.text= menuLang[this.props.lang].COMPANY
 
         a.item(onClick=()=>{scrollTo(document.body, { top: this.online.offsetTop })})
           i.icon.globe.huge
 
-          h6.text ONLINE
+          h6.text= menuLang[this.props.lang].ONLINE
 
         a.item(onClick=()=>{scrollTo(document.body, { top: this.trans.offsetTop })})
           i.icon.file.alternate.huge
 
-          h6.text TRANSLATIONS
+          h6.text= menuLang[this.props.lang].TRANSLATIONS
 
         a.item(onClick=()=>{scrollTo(document.body, { top: this.kids.offsetTop })})
           i.icon.rocket.huge
 
-          h6.text KIDS
+          h6.text= menuLang[this.props.lang].KIDS
 
         a.item(onClick=()=>{scrollTo(document.body, { top: this.buSp.offsetTop })})
           i.icon.suitcase.huge
 
-          h6.text BUSINESS WORKSHOPS & TEAM BUILDING
+          h6.text= menuLang[this.props.lang].BUSINESS
   `;
   }
 };

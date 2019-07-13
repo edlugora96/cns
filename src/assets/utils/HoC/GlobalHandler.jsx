@@ -6,6 +6,7 @@ const HoCGloabl = (Component) => {
       super(props);
       this.state = {
         mobileMenu:false,
+        lang: 0,
       };
       this.setProperty = this.setProperty.bind(this);
     }

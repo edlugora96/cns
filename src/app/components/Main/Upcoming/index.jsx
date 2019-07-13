@@ -2,7 +2,20 @@ import React from 'react';
 import bg5 from '$img/1.jpg';
 import bg6 from '$img/2.jpg';
 import bg7 from '$img/3.jpg';
-
+const upText = {
+  0:{
+    title:'Upcoming Events',
+  },
+  1:{
+    title:'Próximos Eventos',
+  },
+  2:{
+    title:'Upcoming Events',
+  },
+  3:{
+    title:'Upcoming Events',
+  }
+};
 const Upcoming = (props) =>{
   return pug`
     section.upcomingwp
@@ -10,7 +23,7 @@ const Upcoming = (props) =>{
         path(fill="#0098D6", d="M119.849,0C47.861,0,0,24,0,24h240C240,24,191.855,0.021,119.849,0z")
 
       .upcomingwpin.seciton-body
-        h1 Upcoming Events
+        h1= upText[props.lang].title
 
         .upcoming.uc-ev
           div

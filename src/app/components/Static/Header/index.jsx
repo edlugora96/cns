@@ -1,6 +1,7 @@
 /* jshint ignore:end */
 import React from 'react';
 import BackgroundSlider from 'react-background-slider'
+import { Route, Switch, withRouter } from 'react-router-dom';
 import { scrollTo } from 'scroll-js';
 
 import Navbar from "./Navbar/";
@@ -16,18 +17,20 @@ const backgrounds = [
   sld3
 ];
 
-const Header = () => {
+const Header = (props) => {
   return(
-    <header id="main-header">
-      <BackgroundSlider
-    images={backgrounds}
-    duration={10} transition={2} />
-      <Navbar />
-      <Hero />
+    <header id="main-header" className={props.location.pathname!=='/'?'menu-not-home':''}>
+      <Switch>
+        <Route exact path="/" render={()=><BackgroundSlider images={backgrounds} duration={10} transition={2} />}/>
+      </Switch>
+      <Navbar {...props}/>
+      <Switch>
+        <Route exact path="/" component={Hero}/>
+      </Switch>
       <a onClick={()=>{scrollTo(document.body, { top: document.querySelector('#main-header').offsetHeight })}} href="# " className="scrollDown">
         <span></span>
       </a>
     </header>
   );
 };
-export default Header;
+export default withRouter(Header);

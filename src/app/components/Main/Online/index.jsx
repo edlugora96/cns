@@ -3,7 +3,8 @@ import Markdown from 'react-markdown/with-html';
 import o1 from '$img/o1.svg';
 import o2 from '$img/o2.svg';
 import o3 from '$img/o3.svg';
-const whatwedo = `
+const whatwedo = {
+0:`
 ## Online
 
 We offer online courses from any part of the world. Our private online classes allow you to learn a new language from any time zone. Like our in-person courses, our online courses are tailor-made and deisgned specifically for your level. Students choose which language they want to learn, and we prepare students for both social and professional real-life situations.
@@ -14,7 +15,44 @@ All material given during the class is provided by the school and then sent to t
 
 **Please see below for the cancellation policy**
 
-`;
+`,
+1:`
+## Online
+
+Ofrecemos cursos online desde cualquier parte del mundo. Nuestras clases privadas online le permiten aprender un nuevo idioma desde cualquier zona horaria. Del mismo modo que en nuestros cursos presenciales, nuestros cursos online están hechos a medida y diseñados específicamente para su nivel. Los estudiantes eligen la lengua que quieren aprender y les preparamos para situaciones reales tanto sociales como profesionales.
+
+Todo el material proporcionado en la clase va a cargo de la escuela y se envía al estudiante dentro de 24 horas después de clase.
+
+*CNS INTERNATIONAL ofrece cursos online de inglés, francés, portugués y español.*
+
+**Por favor consulte a continuación las condiciones de cancelación**
+
+`,
+2:`
+## Online
+
+We offer online courses from any part of the world. Our private online classes allow you to learn a new language from any time zone. Like our in-person courses, our online courses are tailor-made and deisgned specifically for your level. Students choose which language they want to learn, and we prepare students for both social and professional real-life situations.
+
+All material given during the class is provided by the school and then sent to the student within 24 hours after the class.
+
+*CNS INTERNATIONAL offers online courses in English, French, Portuguse, and Spanish.*
+
+**Please see below for the cancellation policy**
+
+`,
+3:`
+## Online
+
+We offer online courses from any part of the world. Our private online classes allow you to learn a new language from any time zone. Like our in-person courses, our online courses are tailor-made and deisgned specifically for your level. Students choose which language they want to learn, and we prepare students for both social and professional real-life situations.
+
+All material given during the class is provided by the school and then sent to the student within 24 hours after the class.
+
+*CNS INTERNATIONAL offers online courses in English, French, Portuguse, and Spanish.*
+
+**Please see below for the cancellation policy**
+
+`,
+};
 
 const clouds = `M0,24h240V5.194c-2.617-1.615-6.191-3.108-10.605-3.108c-9.608,0-13.076,5.393-13.076,5.393
 s-3.661-2.947-8.213-0.762c-7.401,3.579-1.885,11.708-1.885,11.708s-1.104,0.161-1.543,0.742c-0.43,0.622-0.137,1.663-0.137,1.663
@@ -47,7 +85,7 @@ const Online = (props) =>{
             img(src=o3)
 
         .online
-          Markdown(source=whatwedo, escapehtml=false)
+          Markdown(source=whatwedo[props.lang], escapehtml=false)
 
       svg.uncode-row-divider.uncode-row-divider-clouds(version="1.1", x="0px", y="0px", width="240px", height="24px", viewBox="0 0 240 24", enableBackground="new 0 0 240 24", xmlSpace="preserve", preserveAspectRatio="xMidYMid")
         path(fill="#ffffff", d=clouds)
